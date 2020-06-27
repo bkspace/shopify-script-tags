@@ -29,12 +29,7 @@ describe('scripts', () => {
   describe('getScripts', () => {
     it('makes a GET request to retrieve all active script tags', async () => {
       const mockFetch = jest.fn().mockResolvedValue('foo')
-      const result = await getScripts(
-        mockFetch,
-        'access_token',
-        'my_shop',
-        'script_url',
-      )
+      const result = await getScripts(mockFetch, 'access_token', 'my_shop')
       const expectedAPIUri =
         'https://my_shop/admin/api/2020-04/script_tags.json'
       const expectedOptions = {
