@@ -1,6 +1,6 @@
 {
   "name": "shopify-script-tags",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A small library to inject script tags into Shopify storefront(s).",
   "keywords": [
     "shopify",
