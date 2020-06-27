@@ -50,7 +50,9 @@ await deleteScript(
 )
 ```
 
-This function returns a response. It is left to the consumer to handle any possible errors. I expect this library will handle both fetch and a gql client in the near future.
+These function return a fetch response. It is left to the consumer to handle any possible errors. I expect this library will handle both fetch and a gql client in the near future.
+
+Note - you can add the same script multiple times, so injecting a script should be done once, or validate that the script being injected is different and/or versioned.
 
 ## Development
 ```yarn build```
