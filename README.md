@@ -1,4 +1,4 @@
-# shopify-script-tags-ts 📜
+# shopify-script-tags 📜
 
 A small library to inject script tags into Shopify storefront(s).
 
@@ -20,9 +20,9 @@ The script tag will live on the storefront(s) for as long as said store is authe
 
 ## Usage
 
-```yarn install shopify-script-tags-ts```
+```yarn install shopify-script-tags```
 
-```import { injectScript } from 'shopify-script-tags-ts'```
+```import { injectScript } from 'shopify-script-tags'```
 
 ```
 await injectScript(

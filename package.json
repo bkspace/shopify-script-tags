@@ -1,5 +1,5 @@
 {
-  "name": "shopify-script-tags-ts",
+  "name": "shopify-script-tags",
   "version": "0.0.1",
   "main": "./dist/lib/index.js",
   "typings": "./dist/types/index.d.ts",
