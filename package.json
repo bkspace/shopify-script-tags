@@ -1,6 +1,13 @@
 {
   "name": "shopify-script-tags",
   "version": "0.0.2",
+  "description": "A small library to inject script tags into Shopify storefront(s).",
+  "keywords": [
+    "shopify",
+    "shopify script tag",
+    "shopify api",
+    "shopify application"
+  ],
   "main": "./dist/lib/index.js",
   "typings": "./dist/types/index.d.ts",
   "license": "MIT",
