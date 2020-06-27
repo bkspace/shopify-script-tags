@@ -33,6 +33,23 @@ await injectScript(
 )
 ```
 
+```
+await getScripts(
+    fetch,
+    accessToken,
+    shop,
+)
+```
+
+```
+await deleteScript(
+    fetch,
+    accessToken,
+    shop,
+    '1234',
+)
+```
+
 This function returns a response. It is left to the consumer to handle any possible errors. I expect this library will handle both fetch and a gql client in the near future.
 
 ## Development
