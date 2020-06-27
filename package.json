@@ -1,0 +1,26 @@
+{
+  "name": "shopify-script-tags-ts",
+  "version": "0.0.1",
+  "main": "./dist/lib/index.js",
+  "typings": "./dist/types/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "yarn build",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.3",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.1.1",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^3.9.5"
+  }
+}
