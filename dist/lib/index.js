@@ -36,13 +36,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.injectScript = void 0;
+exports.removeScript = exports.getScripts = exports.injectScript = void 0;
 exports.injectScript = function (fetch, accessToken, shop, scriptUrl) { return __awaiter(void 0, void 0, void 0, function () {
     var createScriptTagUrl, shopRequestHeaders, scriptTagBody;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                createScriptTagUrl = 'https://' + shop + '/admin/api/2020-04/script_tags.json';
+                createScriptTagUrl = "https://" + shop + "/admin/api/2020-04/script_tags.json";
                 shopRequestHeaders = {
                     'X-Shopify-Access-Token': accessToken,
                     Accept: 'application/json',
@@ -58,6 +58,43 @@ exports.injectScript = function (fetch, accessToken, shop, scriptUrl) { return _
                         method: 'POST',
                         headers: shopRequestHeaders,
                         body: JSON.stringify(scriptTagBody),
+                    })];
+            case 1: return [2 /*return*/, _a.sent()];
+        }
+    });
+}); };
+exports.getScripts = function (fetch, accessToken, shop) { return __awaiter(void 0, void 0, void 0, function () {
+    var createScriptTagUrl, shopRequestHeaders;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                createScriptTagUrl = "https://" + shop + "/admin/api/2020-04/script_tags.json";
+                shopRequestHeaders = {
+                    'X-Shopify-Access-Token': accessToken,
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                };
+                return [4 /*yield*/, fetch(createScriptTagUrl, {
+                        headers: shopRequestHeaders,
+                    })];
+            case 1: return [2 /*return*/, _a.sent()];
+        }
+    });
+}); };
+exports.removeScript = function (fetch, accessToken, shop, scriptId) { return __awaiter(void 0, void 0, void 0, function () {
+    var createScriptTagUrl, shopRequestHeaders;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                createScriptTagUrl = "https://" + shop + "/admin/api/2020-04/script_tags/" + scriptId + ".json";
+                shopRequestHeaders = {
+                    'X-Shopify-Access-Token': accessToken,
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                };
+                return [4 /*yield*/, fetch(createScriptTagUrl, {
+                        method: 'DELETE',
+                        headers: shopRequestHeaders,
                     })];
             case 1: return [2 /*return*/, _a.sent()];
         }
